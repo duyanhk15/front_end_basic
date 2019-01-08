@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>JQuery DOM</title>
+  <script 
+  src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js">
+  </script>;
+  
+  <script>
+    $(document).ready(function(){
+      
+      // css("propertyname"); -- Lấy giá trị thuộc tính
+      
+      // css("propertyname","value"); -- thiết lập hay gán thuộc tính
+      
+      // css({"propertyname":"value","propertyname":"value",....});
+      // Gán nhiều giá trị cho các thuộc tính
+      
+      
+      // Lấy giá trị thuộc tính
+      $("#btn1").click(function(){
+        alert("Background color = "+$("p").css("background-color"));
+      });
+      
+      
+      // Gán giá trị thuộc tính cho thẻ P
+      $("#btn2").click(function(){
+        $("p").css("background-color","pink");
+      });
+      
+      $("#btn3").click(function(){
+        $("p").css({"background-color":"RED",
+                    "font-size":"150%",
+                    "color":"WHITE","text-align":"center"});
+      });
+      
+    });
+  </script>
+  
+  <style>
+  </style>
+  
+</head>
+<body>
+  
+  <p style="background-color: pink"> DEMO 1</p>
+  <p style="background-color: blue"> DEMO 2</p>
+  <p style="background-color: green"> DEMO 3</p>
+  
+  <button id="btn1">Lấy màu background</button>
+  <button id="btn2">Gán giá trị màu background</button>
+  <button id="btn3">Gán nhiều thuộc tính</button>
+
+</body>
+</html>

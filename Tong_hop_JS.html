@@ -1,0 +1,109 @@
+<html>
+	<head>
+		<title>Form Validation</title>
+	</head>
+	<body>
+		<form name="form1" action="trangchu.php" method="post">
+			Họ và tên: <input type="text" name="username" placeholder="Mời nhập họ và tên" id="usrid"/><br>
+			Địa chỉ: <input type="text" name="address" placeholder="Mời nhập địa chỉ" id="diachi"/><br>
+			Số điện thoạỉ: <input type="text" name="phone" placeholder="Mời nhập số điện thoại" id="fone"/><br>
+			Email: <input type="text" name="email" placeholder="Mời nhập email" id="email"/><br>
+			
+			<input type="submit" value="Kiểm tra nhập liệu" onclick="return kiemtranhap()" /><br>
+			<input type="button" value="Kiểm tra kí tự" onclick="return KiemTraTatCaKiTu('diachi')"/><br>
+			<input type="button" value="Kiểm tra số" onclick="return KiemTraTatCaLaSo('fone')"/><br>
+			<input type="button" value="Kiểm tra Email hợp lệ" onclick="return KiemTraEmailHopLe('email')"/><br>
+			<input type="button" value="Kiểm tra độ dài" onclick="return kiemtraminmax('usrid',8,12)"/><br>
+		</form>
+		
+		<p id="thongbao"></p>
+		<p id="thongbao1"></p>
+		<p id="thongbao11"></p>
+		<p id="thongbao2"></p>
+		
+		<script type="text/javascript">
+			function kiemtranhap() {
+			var inputTen = document.forms["form1"]["username"];
+			//var inputTen = document.form1.username;
+			var giatriTen = inputTen.value;
+			var theP = document.getElementById("thongbao");
+			if(giatriTen=="")
+			{
+				//alert("Mời nhập vào giá trị");
+				theP.style.display = "block";
+				theP.innerHTML = "Hãy nhập vào giá trị";
+				theP.style.color = "red";
+				return false;
+			} else {
+				//alert("Bạn đã nhập rồi. Xin cảm ơn");
+				theP.style.display = "none";
+				return true;
+			}
+			}
+			
+			function KiemTraTatCaKiTu(idTag) {
+			var inputTag = document.getElementById(idTag);
+			var letters = /^[A-Za-z]+$/;
+			var theP = document.getElementById("thongbao1");
+			if(inputTag.value.match(letters))
+			{
+				theP.style.display = "none";
+				return true;
+			} else {
+				theP.style.display = "block";
+				theP.innerHTML = "Hãy nhập tất cả đều là ký tự";
+				theP.style.color = "black";
+				return false;
+			}
+			}
+			
+			function KiemTraTatCaLaSo(idTag) {
+			var inputTag = document.getElementById(idTag);
+			var numbers = /^[0-9]+$/;
+			var theP = document.getElementById("thongbao11");
+			if(inputTag.value.match(numbers))
+			{
+				theP.style.display = "none";
+				return true;
+			} else {
+				theP.style.display = "block";
+				theP.innerHTML = "Hãy nhập tất cả đều là số";
+				theP.style.color = "blue";
+				return false;
+			}
+			}
+			
+			function KiemTraEmailHopLe(idTag) {
+			var inputTag = document.getElementById(idTag);
+			var email =  /^([\w\.])+@([a-zA-Z0-9\-])+\.([a-zA-Z]{2,4})(\.[a-zA-Z]{2,4})?$/;
+			var theP = document.getElementById("thongbao2");
+			if(inputTag.value.match(email))
+			{
+				theP.style.display = "none";
+				return true;
+			} else {
+				theP.style.display = "block";
+				theP.innerHTML = "Hãy nhập email hợp lệ";
+				theP.style.color = "green";
+				return false;
+			}
+			}
+			
+			function kiemtraminmax(idText, minlength, maxlength)
+			{
+				var inputText = document.getElementById(idText);
+				var field = inputText.value;
+				var theP = document.getElementById("thongbao");
+					if(field.length<minlength || field.length> maxlength){
+					theP.style.display = "block";
+					theP.innerHTML = "Hãy nhập vào giá trị từ "+minlength+" đến "+maxlength;
+					theP.style.color = "red";
+					return false;
+					} else {
+					theP.style.display = "none";
+					return true;
+			} 
+			}
+		</script>
+	</body>
+</html>

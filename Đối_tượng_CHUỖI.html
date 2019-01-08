@@ -1,0 +1,61 @@
+<html>
+<head>
+  <title>Bài tập đối tượng chuỗi</title>
+  <style>
+  body {
+  font-family: arial;
+  }
+  </style>
+</head>
+<body>
+  <script type="text/javascript">
+    // Tìm vị trí chuỗi con nằm đầu
+    var chuoi = "he thong khoa hoc myclass.vn";
+    document.write("Vị trí xuất hiện chuỗi myclass.vn là: <b>" 
+                   + chuoi.indexOf("myclass.vn") +"</b><br>");
+    
+    // Tìm vị trí chuỗi con nằm cuối
+    var string = "Hoc lap trinh myclass.vn – Trang web myclass.vn hoc theo du an thuc tien tai myclass.vn";
+    document.write("Vị trí xuất hiện chuỗi myclass.vn là:<b> "+
+                  string.lastIndexOf("myclass.vn")+"</b><br>");
+    
+    // Tìm vị trí chuỗi con sử dụng search
+    var chuoi2 = "He thong khoa hoc myclass.vn";
+    document.write("Vị trí xuất hiện chuỗi myclass.vn là: <b>" 
+                   + chuoi2.search("myclass.vn") +"</b><br>");
+    
+    // Slice
+    var chuoi1 = "Xin chao cac ban den he thong myclass.vn";
+    document.write("Chuỗi cần lấy là: <b>" 
+                   + chuoi1.slice(30,40)+"</b><br>");
+    
+    // Truyền vào âm
+    // Dương lấy theo chiều xuôi
+    // Âm lấy ngược lại
+    var chuoi1 = "Xin chao cac ban den he thong myclass.vn";
+    document.write("Chuỗi cần lấy là: <b>" 
+                   + chuoi1.slice(-12,35)+"</b><br>");
+    
+    // Truyền vào một tham số
+    var chuoi1 = "Xin chao cac ban den he thong myclass.vn";
+    document.write("Chuỗi cần lấy là: <b>" 
+                   + chuoi1.slice(34)+"</b><br>");
+    
+    // Substring
+    var chuoi1 = "Xin chao cac ban den he thong myclass.vn";
+    document.write("Chuỗi cần lấy là: <b>" 
+                   + chuoi1.substring(23,35)+"</b><br>");
+    
+    //substr
+    var chuoi1 = "Xin chao cac ban den he thong myclass.vn";
+    document.write("Chuỗi cần lấy là: <b>" 
+                   + chuoi1.substr(22, 5)+"</b><br>");
+    
+    // Substr
+    var chuoi1 = "Xin chao cac ban den he thong myclass.vn";
+    document.write("Chuỗi cần lấy là: <b>" 
+                   + chuoi1.substr(-2,1)+"</b><br>");
+    
+  </script>
+</body>
+</html>

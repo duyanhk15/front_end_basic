@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Bài 83 Carousel bootstrap</title>
+  
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+</head>
+<body>
+  
+  <div class="container">
+    <br>
+    <div id="myCarousel" class="carousel slide" data-ride="carousel">
+      
+      <!-- Phần các chỉ số -->
+      <ol class="carousel-indicators">
+        <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+        <li data-target="#myCarousel" data-slide-to="1"></li>
+        <li data-target="#myCarousel" data-slide-to="2"></li>
+        <li data-target="#myCarousel" data-slide-to="3"></li>
+      </ol>
+      
+      <!-- Phần bao các slides -->
+      <div class="carousel-inner" role="listbox">
+        <div class="item active">
+          <img src="abc.jpg" alt="Hình 1" width="100%" height="100%">
+          <div class="carousel-caption">
+            <p>Hình 1</p>
+          </div>
+        </div>
+        
+        <div class="item">
+          <img src="logo.png" alt="Hình 2" width="100%" height="100%">
+          <div class="carousel-caption">
+            <p>Hình 2</p>
+          </div>
+        </div>
+        
+        <div class="item">
+          <img src="abc1.jpg" alt="Hình 3" width="100%" height="100%">
+          <div class="carousel-caption">
+            <p>Hình 3</p>
+          </div>
+        </div>
+        
+        <div class="item">
+          <img src="abc3.jpg" alt="Hình 4" width="100%" height="100%">
+          <div class="carousel-caption">
+            <p>Hình 4</p>
+          </div>
+        </div>
+      </div>
+      
+      
+      <!-- Control điều khiển -->
+      <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+        <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+      </a>
+      
+      <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+        <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+      </a>
+      
+    </div>
+  </div>
+  
+</body>
+</html>

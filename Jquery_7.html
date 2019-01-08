@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Jquery 4</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+ 
+  
+  <script>
+    $(document).ready(function(){
+      
+      /*
+      $("#flip").click(function(){
+        $("#panel").slideDown();
+      }); */
+      
+      /*
+      $("#flip").click(function(){
+        $("#panel").slideUp();
+      }); */
+      
+      $("#flip").click(function(){
+        $("#panel").slideToggle();
+      });
+     
+    });
+    
+  </script>
+  
+  <style>
+    #panel, #flip {
+      padding: 5px;
+      text-align: center;
+      background-color: #e5eecc;
+      border: solid 1px #c3c3c3;
+    }
+    
+    #panel {
+      padding: 50px;
+      display: none;
+    }
+  </style>
+</head>
+<body>
+  <div id="flip" style="cursor: pointer;">Click vào đây để thấy hiệu ứng</div>
+  <div id="panel">Hệ thống học lập trình trực tuyến Myclass.vn</div>
+</body>
+</html>

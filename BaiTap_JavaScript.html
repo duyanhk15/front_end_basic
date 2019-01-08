@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>JavaScript</title>
+</head>
+<body>
+  <img src="http://myclass.vn/wp-content/uploads/2015/11/LOGOMYCLASS-final.png"
+  style="width:20%; float: right;">
+  
+  <script type="text/javascript">
+    /*function VongLapWhile(max) {
+      i = 0;
+      while(i < max)
+        {
+          document.write(i+" ");
+          i++;
+        }
+    }*/
+    
+    function VongLapDo_While(max) {
+      i = 0;
+      do
+        {
+          document.write(i+" ");
+          i++;
+        }while(i < max);
+    }
+    
+    function changeColor(choose){
+      var txt = document.getElementById("test");
+      if(choose==1){ // là focus
+        txt.style.border = "solid 4px red";
+      } else { // onBlur
+        txt.style.border = "solid 2px blue";
+      }
+    }
+    
+    function thayDoiChon(){
+      var theP = document.getElementById("xuat");
+      var dropDown = document.getElementById("QuocGia");
+      theP.innerHTML = dropDown.value;
+    }
+    
+    function changeColorButton(choose1){
+      var txt = document.getElementById("nut");
+      if(choose1==1){ 
+        txt.style.backgroundColor = "green";
+      } else if(choose1==2){
+        txt.style.backgroundColor = "pink";
+      } else if(choose1==3){
+        txt.style.backgroundColor = "orange";
+      } else if(choose1==4){
+        txt.style.backgroundColor = "purple";
+      }
+    }
+    
+    function LayGiaTri(){
+      var theP = document.getElementById("noidung");
+      theP.innerHTML = "Xin chào myclass.vn";
+      theP.style.color = "red";
+    }
+    
+    function LayGiaTriTheP2()
+    {
+     var tatcaP = document.getElementsByTagName("p");
+      alert("Tổng số thẻ P: "+tatcaP.length+
+            " \nNội dung thẻ P: "+tatcaP[3].innerHTML);
+    }
+    
+    function LayGiaTriTheClassDemo(){
+      var tatcaP = document.getElementsByClassName("demo");
+      alert("Tổng số thẻ P có class = demo: "+tatcaP.length+
+            " \nNội dung thẻ P chứa class cần tìm: "+tatcaP[1].innerHTML);
+    }
+  </script>
+  <input type="button" id="nut" 
+         value="Lặp While" 
+         onclick="VongLapWhile(10)" 
+         onMouseOver="changeColorButton(1)"
+         onMouseOut="changeColorButton(2)"
+         onMouseDown="changeColorButton(3)"
+         onMouseUp="changeColorButton(4)"><br><br>  
+  
+  <input type="button" 
+         value="Lặp Do While" 
+         onclick="VongLapDo_While(10)"><br><br> 
+  
+  <input type="text" 
+         id="test" 
+         onFocus="changeColor(1)" 
+         onBlur="changeColor(0)"><br><br>
+  
+  <p id="xuat"></p>
+  <select id="QuocGia" onChange="thayDoiChon()">
+    <option>Việt Nam</option>
+    <option>Laos</option>
+    <option>Cambodian</option>
+    <option>Malaysia</option>
+    <option selected>ThaiLand</option>
+  </select><br>
+  
+  <p id="noidung"></p>
+  <p class="demo"> thẻ p1 </p>
+  <p> thẻ p2 </p>
+  <p class="demo"> thẻ p3 </p>
+  <input type="button" value="Lấy giá trị" 
+         onclick="LayGiaTri()"><br><br>
+  <input type="button" value="Lấy giá trị thẻ p2" 
+         onclick="LayGiaTriTheP2()">
+  <br><br>
+  <input type="button" value="Lấy giá trị thẻ có class = demo" 
+         onclick="LayGiaTriTheClassDemo()">
+
+
+</body>    
+<script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/1.0.0/handlebars.js"></script>
+</html>

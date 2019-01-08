@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Jquery 4</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  
+  <style>
+  p.flip {
+  cursor: pointer;
+  }
+  
+  div.panel, p.flip {
+  line-height: 30px;
+  margin: auto;
+  font-size: 16px;
+  padding: 5px;
+  text-align: center;
+  background: #555;
+  border: solid 1px #666;
+  color: white;
+  border-radius: 15px;
+  }
+  </style>
+  
+  <script>
+    $(document).ready(function(){
+      
+      $(".flip").click(function(){
+        $(".panel").toggle();
+      });
+      
+      /*
+      $("p").click(function(){
+        $(this).hide();
+      });
+      */
+      
+      /*
+      $("p").mouseenter(function(){
+        $(this).hide();
+        //alert("Đã chạy thành công");
+      });
+      */
+      
+      /*
+      $("p").mousedown(function(){
+        $(this).hide();
+        //alert("Đã chạy thành công");
+      });
+      */
+      
+      /*
+      $("p").mouseup(function(){
+        $(this).hide();
+        //alert("Đã chạy thành công");
+      });
+      */
+      
+      /*
+      $("p").hover(function(){ // rê chuột
+        $(this).hide();
+        //alert("Đã chạy thành công");
+      });
+      
+      $("#abc").focus(function(){
+        $(this).css("background-color","yellow");
+      });
+      
+      $("#abc").blur(function(){
+        $(this).css("background-color","white");
+      });
+      */
+      
+      $("#show").click(function(){
+        $("p.test").show("slow");
+      });
+      
+      $("#hide").click(function(){
+        $("p.test").hide(900);
+      });
+      
+    });
+    
+  </script>
+</head>
+<body>
+  
+  <input type="text" name="abc" id="abc"/>
+  <br>
+  <p> Bấm vào để biến mất </p>
+  <p> Thẻ test </p>
+  
+  <p class="flip">Click ẨN - HIỆN</p>
+  
+  <div class="panel" style="display:block;">
+    
+    <p>Chào mừng đến với khoá học lập trình front end cơ bản</p>
+    <p>Hệ thống học lập trình trực tuyến myclass.vn</p>
+  
+  </div>
+  <br><br><br>
+  <p class="test"> Click vào 2 button ẩn hoặc hiện để thấy hiệu ứng</p>
+  <button id="show">Hiện</button><br><br>
+  <button id="hide">Ẩn</button><br><br>
+  
+  
+</body>
+</html>

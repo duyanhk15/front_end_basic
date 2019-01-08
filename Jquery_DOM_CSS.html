@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>JQuery DOM</title>
+  <script 
+  src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js">
+  </script>;
+  
+  <script>
+    $(document).ready(function(){
+      
+      $("#btn1").click(function(){
+        $("h1,h2,p").addClass("red");
+        $("div").addClass("important");
+      });
+      
+      $("#btn2").click(function(){
+        $("#div1").addClass("important red");
+      });
+      
+      $("#btn3").click(function(){
+        $("h1,h2,p").removeClass("red");
+      })
+      
+      $("#btn4").click(function(){
+        $("h1,h2,p").toggleClass("red");
+      });
+      
+    });
+  </script>
+  
+  <style>
+    
+    .important {
+      font-weight: bold;
+      font-size: xx-large;
+      color: blue;
+    }
+    
+    .red {
+      color: red;
+    }
+    
+  </style>
+  
+</head>
+<body>
+  
+  <h1>DEMO H1 THÔI</h1>
+  <h2>DEMO H2</h2>
+  
+  <p> Lập trình front end cơ bản</p>
+  <p> Lập trình front end cơ bản tại Myclass.vn</p>
+  <div id="div1">Lập trình front end cơ bản tại Myclass.vn Important</div>
+  <br><br>
+  
+  <button id="btn1">Thêm class đến các thẻ</button>
+  <button id="btn2">Thêm NHIỀU class đến các thẻ</button>
+  <button id="btn3">xoá class</button>
+  <button id="btn4">Toggle class</button>
+  
+</body>
+</html>

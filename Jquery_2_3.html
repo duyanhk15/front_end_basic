@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Jquery 1</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  
+  <script>
+    $(document).ready(function(){
+      
+      // Ẩn tất cả thẻ
+      $("button").click(function(){
+        $("*").hide();
+      });
+      
+      // Ẩn thẻ đang được click qua đối tượng this
+      $("button").click(function(){
+        $(this).hide();
+      });
+      
+      // Ẩn thẻ với classname
+      $("button").click(function(){
+        $("p.test").hide();
+      });
+      
+      // Ẩn thẻ ở vị trí đầu tiên tìm thấy
+      $("button").click(function(){
+        $("p:first").hide();
+      });
+      
+      // Ẩn thẻ li đầu tiên của ul đầu tiên
+      $("button").click(function(){
+        $("ul li:first").hide();
+      });
+      
+      //Ẩn thẻ li dầu tiên của tất cả ul
+      $("button").click(function(){
+        $("ul li:first-child").hide();
+      });
+      
+      // Ẩn các thẻ a có thuộc tính target="_blank"
+      $("button").click(function(){
+        $("a[target='_blank']").hide();
+      });
+      
+      // Ẩn các thẻ a có thuộc tính target không phải blank
+      $("button").click(function(){
+        $("a[target!='_blank']").hide();
+      });
+      
+      // Màu cho các dòng chẵn trong bảng
+      $("tr:even").css("background-color", "yellow");
+      
+      // Màu cho các dòng lẻ trong bảng
+      $("tr:odd").css("background-color", "gray");
+      
+    });
+    
+  </script>
+</head>
+<body>
+  <h2> Học lập trình tại Myclass.vn</h2>
+  
+  <p class="test">Xin chào Myclass.vn</p>
+  <p>bla bla bla....</p>
+  <p>hello ajinomoto</p>
+  <p class="test">Hello world</p>
+  
+  <p> Danh sách .NET</p>
+  <ul>
+    <li>asd</li>
+    <li>qwe</li>
+    <li>tyu</li>
+  </ul>
+  
+  <p> Danh sách Android</p>
+  <ul>
+    <li>asd123</li>
+    <li>qwe245</li>
+    <li>tyu678</li>
+  </ul>
+  
+  <p><a href="https://www.myclass.vn" target="_blank">Học lập trình tại Myclass.vn</a></p>
+  <p><a href="https://www.facebook.com">Click vào đây để vào facebook</a></p>
+  
+  <table border="3">
+    <tr>
+      <th>khoá học</th>
+      <th>công nghệ</th>
+    </tr>
+    <tr>
+      <td>dòng 1</td>
+      <td>dòng 1</td>
+    </tr>
+    <tr>
+      <td>dòng 2</td>
+      <td>dòng 2</td>
+    </tr>
+    <tr>
+      <td>dòng 3</td>
+      <td>dòng 3</td>
+    </tr>
+    <tr>
+      <td>dòng 4</td>
+      <td>dòng 4</td>
+    </tr>
+    <tr>
+      <td>dòng 5</td>
+      <td>dòng 5</td>
+    </tr>
+    
+  </table>
+  <br><br>
+  
+  <button style="background:red; padding: 20px; 
+                 font-size: 30px; border: solid 3px green">
+    CLICK HERE</button><br><br>
+</body>
+</html>

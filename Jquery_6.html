@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Jquery 4</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+ 
+  
+  <script>
+    $(document).ready(function(){
+      
+      /*
+      $("button").click(function(){
+        $("#div1").fadeIn();
+        $("#div2").fadeIn("slow");
+        $("#div3").fadeIn(3000);
+      });
+      */
+      
+      /*
+      $("button").click(function(){
+        $("#div1").fadeOut();
+        $("#div2").fadeOut("slow");
+        $("#div3").fadeOut(3000);
+      });
+      */
+      
+      $("button").click(function(){
+        $("#div1").fadeTo("slow",0.14);
+        $("#div2").fadeTo("slow",0.5);
+        $("#div3").fadeTo("fast",0.7);
+      });
+      
+    });
+    
+  </script>
+</head>
+<body>
+  
+  <p> Click vào button dưới đây để thấy hiệu ứng</p><br>
+  <button id="show">Click me</button><br><br>
+  
+  <!-- fadeIn(); 
+  <div id="div1" style="width: 80px; height: 80px; background-color: red; display:none;"></div><br><br>
+  <div id="div2" style="width: 80px; height: 80px; background-color: blue; display:none;"></div><br><br>
+  <div id="div3" style="width: 80px; height: 80px; background-color: green; display:none;"></div><br><br> -->
+  
+  <!-- fadeOut() + fadeTo() -->
+  <div id="div1" style="width: 80px; height: 80px; background-color: red;"></div><br><br>
+  <div id="div2" style="width: 80px; height: 80px; background-color: blue;"></div><br><br>
+  <div id="div3" style="width: 80px; height: 80px; background-color: green;"></div><br><br>
+  
+  
+</body>
+</html>

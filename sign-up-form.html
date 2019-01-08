@@ -1,0 +1,97 @@
+<html>
+	<head>
+		<title>Trang đăng ký thành viên</title>
+	</head>
+	<body>
+		<div id="container">
+			<form action="abc.php" method="post" style="width: 540px; margin: 50px auto; 
+			background: #dcbfbf; border-radius: 20px; padding: 5px; padding-left: 20px; padding-right: 20px; padding-bottom: 25px;">
+				<h1 style="text-align: center;">Đăng Ký Thành Viên/ Sign up (Vi-En)</h1>
+				
+				<!-- Phần 1 -->
+				<span style="display: inline-block; background: #9393e4; 
+				color: white; padding: 8px 15px 8px 14px; border-radius: 100%; font-size: 21px;">1.</span> 
+				<span style="font-size: 22px; font-weight: bold;">Nhập thông tin của bạn (your info):</span>
+				<br>
+				<br>
+				<span>Họ và tên (Full name):</span>
+				<br>
+				<input type="text" name="username" placeholder="Mời nhập họ tên của bạn - Full name" 
+				style="margin-top: 10px; margin-bottom: 10px; padding-top: 10px; padding-bottom: 10px; width: 100%; text-align: center;"></input>
+				<br>
+				<span>Email (Thư điện tử - gmail hoặc yahoo mail..v..v..):</span>
+				<br>
+				<input type="text" name="email" placeholder="Mời nhập email của bạn - Email" 
+				style="margin-top: 10px; margin-bottom: 10px; padding-top: 10px; padding-bottom: 10px; width: 100%; text-align: center;"></input>
+				<br>
+				<span>Mật khẩu (Password):</span>
+				<br>
+				<input type="password" name="pass" placeholder="Mời nhập mật khẩu của bạn - Password" 
+				style="margin-top: 10px; margin-bottom: 10px; padding-top: 10px; padding-bottom: 10px; width: 100%; text-align: center;"></input>
+				<br>
+				Age:
+				<br>
+				<input type="radio" value="Dưới 18 tuổi" name="age_user">Dưới 18 tuổi (Under 18)</input>
+				<br>
+				<input type="radio" value="Từ 18 tuổi trở lên" name="age_user">Từ 18 tuổi trở lên (18 or older)</input>
+				<br>
+				<br>
+				
+				<!-- Phần 2 -->
+				<span style="display: inline-block; background: #9393e4; 
+				color: white; padding: 8px 15px 8px 14px; border-radius: 100%; font-size: 21px;">2.</span> 
+				<span style="font-size: 22px; font-weight: bold;">Nhập hồ sơ của bạn (your profile):</span>
+				<br>
+				<br>
+				<span>Tiểu sử - Biography:</span>
+				<br>
+				<textarea id="bio" placeholder="Nhập tiểu sử - input your bio here" cols="64" rows="8"
+				style="text-align: justify; margin-bottom: 10px; color: green; font-size: 15px;"></textarea>
+				<br>
+				<br>
+				<span>Công việc hiện tại - Job role: </span>
+				<br>
+				<select name="job" id="jobid">
+					<optgroup label="WEB">
+						<option value="frontend_developer">Front-end Developer</option>
+						<option value="php_developer">PHP Developer</option>
+						<option value="python_developer">Python Developer</option>
+						<option value="rails_developer">Rails Developer</option>
+						<option value="web_designer">Web Designer</option>
+						<option value="Wordpress_developer">Wordpress Developer</option>
+					</optgroup>
+					<optgroup label="MOBILE">
+						<option value="Android_developer">Androild Developer</option>
+						<option value="iOS_developer">iOS Developer</option>
+						<option value="mobile_designer">Mobile Designer</option>
+					</optgroup>
+					<optgroup label="BUSINESS">
+						<option value="business_owner">Business Owner</option>
+						<option value="freelancer">Freelancer</option>
+					</optgroup>
+					<optgroup label="OTHER">
+						<option value="secretary">Secretary</option>
+						<option value="maintenance">Maintenance</option>
+					</optgroup>
+					<option value="demo1">New option 1</option>
+					<option value="demo2">New option 2</option>
+				</select>
+				<br>
+				<br>
+				<span>Sở thích - Interests:</span>
+				<br>
+				<input type="checkbox" value="test1" name="checkInterest">Phát triển, xây dựng ý tưởng - Development</input>
+				<br>
+				<input type="checkbox" value="test2" name="checkInterest">Thiết kế, lên ý tưởng - Design</input>
+				<br>
+				<input type="checkbox" value="test3" name="checkInterest">Kinh doanh, marketing - Business</input>
+				<br>
+				<br>
+				<input type="submit" value="ĐĂNG KÝ NGAY - REGISTER NOW"
+				style="padding: 20px; width: 100%; background-color: #25daea; font-weight: bold; 
+				font-size: 22px; display: inline-block; border-radius: 80px; color: red; margin-bottom: 10px;">
+				</input>
+			</form>
+		</div>
+	</body>
+</html>

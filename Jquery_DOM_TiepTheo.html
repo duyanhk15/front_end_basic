@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>JS Bin</title>
+  
+  <script 
+  src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js">
+  </script>;
+  
+  <script>
+    
+    $(document).ready(function(){
+      
+      $("#btn1").click(function(){
+        $("#test1").text("Text đã được thay thế rồi - Myclass.vn");
+      });
+      
+      $("#btn2").click(function(){
+        $("#test2").html("<b>Lập trình myclass.vn đã được thay thế</b>");
+      });
+      
+      $("#btn3").click(function(){
+        $("#test3").val("Huỳnh Duy Anh - Full Stack Web Developer");
+      });
+      
+      $("#btn4").click(function(){
+        $("#test4").attr("href","https://mp3.zing.vn");
+      });
+    });
+    
+  </script>
+</head>
+<body>
+  
+  <p id="test1">Text này sẽ được thay thế</p>
+  <p id="test2">Text này sẽ được thay thế bằng HTML</p>
+  <p>Họ và tên:  <input type="text" id="test3" value="Huỳnh Duy Anh"></p>
+  <p><a href="https://www.facebook.com" id="test4">Facebook.com</a></p>
+  <button id="btn1">Gán Text</button>
+  <button id="btn2">Gán HTML</button>
+  <button id="btn3">Gán Value</button>
+  <button id="btn4">Thay đổi thuộc tính href</button>
+  
+</body>
+</html>

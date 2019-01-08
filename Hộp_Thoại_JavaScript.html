@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Bài tập 1</title>
+  <script type="text/javascript">
+    // Các hộp thoại trong java script
+    
+    // 1. Hộp thoại cảnh báo (alert box)
+    // 2. Hộp thoại xác nhận (confirm box)
+    // 3. Hộp thoại nhập liệu (prompt box)
+    
+    function xuatThongBao(){
+     alert("Chúc mừng năm mới");
+    }
+    
+    function xacNhan(){
+      var xacnhan;
+      xacnhan = confirm("Bạn đã khảo sát trang dạy học số chưa?");
+      if(!xacnhan){
+        document.write("Hãy khảo sát");
+      } else
+        {
+          document.write("Xin cảm ơn");
+        }
+    }
+    
+    // Hàm demo Prompt Box
+    function nhapDuLieu() {
+      var ten;
+      ten = prompt("Vui lòng nhập vào tên của bạn");
+      document.write("Tên của bạn là: "+ten);
+    }
+  </script>
+</head>
+<body>
+  <input type="button" value="Thông báo" onclick="xuatThongBao()"/><br><br>
+  <input type="button" value="xác nhận" onclick="xacNhan()"/><br><br>
+  <input type="button" value="Nhập dữ liệu" onclick="nhapDuLieu()"/><br><br>
+</body>
+</html>

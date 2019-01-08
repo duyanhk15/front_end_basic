@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>JS Bin</title>
+  
+  <script 
+  src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js">
+  </script>;
+  
+  <script>
+    
+    $(document).ready(function(){
+      
+      $("#btn1").click(function(){
+        alert("Hàm text: "+$("#test").text());
+      });
+      
+      $("#btn2").click(function(){
+        alert("Hàm HTML: "+$("#test").html());
+      });
+      
+      $("#btn3").click(function(){
+        alert("Giá trị: "+$("#test1").val());
+      });
+      
+      $("#btn4").click(function(){
+        alert($("#abc").attr("href"));
+      });
+    });
+    
+  </script>
+</head>
+<body>
+  
+  <p id="test">Chào mừng đến với myclass.vn</p>
+  <p>Họ và tên:  <input type="text" id="test1" value="Huỳnh Duy Anh"></p>
+  <p><a href="https://www.facebook.com" id="abc">Facebook.com</a></p>
+  <button id="btn1">Hàm lấy Text</button>
+  <button id="btn2">Hàm lấy HTML</button>
+  <button id="btn3">Hàm lấy giá trị</button>
+  <button id="btn4">Hàm lấy giá trị thuộc tính href</button>
+  
+</body>
+</html>

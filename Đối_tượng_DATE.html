@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Bài tập DATE</title>
+  <script type="text/javascript">
+    
+    var now = new Date();
+    alert(now);
+    
+    var vnwomanDay = new Date(2018,9,20); // Năm - tháng(tự cộng thêm 1) - ngày 
+    alert(vnwomanDay);
+    
+    var vnwomanDayAndTime = new Date(2018,9,20,12,20,30); // Năm-tháng-ngày-giờ-phút-giây
+    alert(vnwomanDayAndTime);
+    
+    var now = new Date();
+    alert("Ngày hôm nay: \n" + now);
+    alert("Ngày hôm qua: \n" + new Date(now.getFullYear(), now.getMonth(), now.getDate() - 1));
+    alert("Ngày mai: \n" + new Date(now.getFullYear(), now.getMonth(), now.getDate() + 1));
+    alert("Ngày mốt: \n" + new Date(now.getFullYear(), now.getMonth(), now.getDate() + 2));
+    
+  </script>
+</head>
+<body>
+</body>
+</html>

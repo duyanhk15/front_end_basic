@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Jquery 4</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+ 
+  
+  <script>
+    
+    //Cú pháp cho hiệu ứng Animate
+    //$(selector).animate({param},speed);
+    
+    $(document).ready(function(){
+      
+      $("button").click(function(){
+        $("div").animate({left: '250px'});
+      });
+      
+      // Chuyển động với nhiều giá trị
+      /*
+      $("button").click(function(){
+        $("#div1").animate({
+          left: '250px',
+          opacity: '0.5',
+          height: '150px',
+          width: '150px'
+        });
+      });
+      */
+      
+      // Chuyển động tương đối so với vị trí ban đầu, xài += hoặc -=
+      /*
+      $("button").click(function(){
+        $("#div1").animate({
+          left: '250px',
+          height: '+=150px',
+          width: '+=150px'
+        });
+      });
+      */
+      
+      /* DEMO STOP */
+      /*
+      $("#flip").click(function(){
+        $("#panel").slideDown();
+      }); 
+      
+      
+      $("button").click(function(){
+        $("#panel").stop();
+      }); */
+      
+      /* Demo chuỗi hiệu ứng kết hợp */
+     /*  $("button").click(function(){
+        $("#p1").css("color","red")
+        .slideUp(2000)
+        .slideDown(2000);
+      }); */
+      
+    });
+    
+  </script>
+  
+  <style>
+    #panel, #flip {
+      font-size: 18px;
+      padding: 5px;
+      text-align: center;
+      background-color: #555;
+      border: solid 1px #666;
+      color: white;
+      border-radius: 10px;
+    }
+    
+    #panel {
+      padding: 50px;
+      display: none;
+    }
+  </style>
+</head>
+<body>
+  <button>Click để thấy chuyển động</button>
+  <p id="p1">Xem lại Jquery 8 để hiểu rõ hơn</p>
+  
+  <div id="div1" style="background: #98bf21; height: 100px; width: 100px; position: absolute;"></div>
+  <br><br><br><br><br><br><br><br>
+  <div id="flip">Click vào đây</div>
+  <div id="panel">Chào Myclass.vn</div>
+  
+  
+</body>
+</html>

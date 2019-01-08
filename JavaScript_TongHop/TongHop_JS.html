@@ -1,0 +1,118 @@
+<html>
+	<head>
+		<title>Bài tập tổng hợp</title>
+		<link rel="stylesheet" type="text/css" href="style.css">
+		<script type="text/javascript" src="validation.js"></script>
+	</head>
+	<body>
+		<div id="container">
+		
+		<a id="dangki" href="#" class="tab" onclick="onDangKi()">ĐĂNG KÝ</a>
+		<a id="dangnhap" href="#" class="tab" onclick="onDangNhap()">ĐĂNG NHẬP</a>
+		
+		<div id="divdangki" class="divForm">
+			<form name="frmDangKi" action="#" method="post">
+				<h2>ĐĂNG KÝ THÀNH VIÊN</h2>
+				<hr/>
+				
+				<div id="thongbao">
+					<p id="pthongbao">
+					
+					</p>
+				</div>
+			
+				<table>
+					<tr>
+						<td>Tên đăng nhập: </td>
+						<td><input type="text" id="tendangnhap" class="inputCSS"/></td>
+					</tr>
+					<tr>
+						<td>Mật khẩu: </td>
+						<td><input type="password" id="matkhau" class="inputCSS"/></td>
+					</tr>
+					<tr>
+						<td>Email: </td>
+						<td><input type="text" id="email" class="inputCSS"/></td>
+					</tr>
+					<tr>
+						<td>Nghề nghiệp: </td>
+						<td>
+							<select id="nghenghiep" class="drnghenghiep">
+								<option>Vui lòng chọn</option>
+								<option>Kỹ sư</option>
+								<option>Bác sĩ</option>
+								<option>Giáo viên</option>
+							</select>
+						</td>
+					</tr>
+					<tr>
+						<td>Tuổi: </td>
+						<td><input type="text" id="tuoi" class="inputCSS"/></td>
+					</tr>
+					<tr>
+						<td>Giới tính: </td>
+						<td>
+							<input type="radio" id="nam" name="gioitinh"/> Nam <br>
+							<input type="radio" id="nu" name="gioitinh"/> Nữ <br>
+							<input type="radio" id="khac" name="gioitinh"/> Khác <br>
+						</td>
+					</tr>
+					<tr>
+						<td colspan="2" style="text-align:center;">
+							<input type="submit" value="ĐĂNG KÝ" id="nutDangki" onclick="return KiemTraHopLe()"/>
+						</td>
+					</tr>
+					<tr>
+						<td colspan="2" style="text-align:center;">
+							Bạn đã có tài khoản? Vui lòng click vào <a href="#" onclick="onDangNhap()">Đăng nhập</a>
+						</td>
+					</tr>
+				</table>
+			</form>
+		</div>
+		
+		<div id="divdangnhap" class="divForm">
+			<form name="frmDangNhap" action="#" method="post">
+				<h2>ĐĂNG NHẬP</h2>
+				<hr/>
+				<table>
+					<tr>
+						<td>Tên đăng nhập: </td>
+						<td><input type="text" id="idDangNhap" class="inputCSS"/></td>
+					</tr>
+					<tr>
+						<td>Mật khẩu: </td>
+						<td><input type="password" id="idMatKhau" class="inputCSS"/></td>
+					</tr>
+					<tr>
+						<td colspan="2" style="text-align:center;">
+							<input type="checkbox" id="chxGhiNho"/> Ghi nhớ lần sau
+						</td>
+					</tr>
+					<tr>
+						<td colspan="2" style="text-align:center;">
+							<a href="#">Quên mật khẩu</a>
+						</td>
+					</tr>
+					<tr>
+						<td colspan="2" style="text-align:center;">
+							<input type="submit" value="ĐĂNG NHẬP" id="nutDangNhap"/>
+						</td>
+					</tr>
+					<tr>
+						<td colspan="2" style="text-align:center;">
+							Bạn chưa có tài khoản? Vui lòng click vào <a href="#" onclick="onDangKi()">Đăng ký</a>
+						</td>
+					</tr>
+				</table>
+			</form>
+		</div>
+		
+		
+		
+		
+		<p id="thongbao0"></p>
+		<p id="thongbao1"></p>
+		</div>
+	</body>
+</html>
